@@ -1,0 +1,16 @@
+[h2]What is this?[/h2]
+This mod just disables sleep needs from the game. By the default behaviour, only your community has their sleep disabled, but you can change this in the settings.
+
+[b]Can be added to current saves.[/b]
+
+[b]Not tested in coop.[/b]
+
+[h2]Settings[/h2]
+The settings file can be found in the mod's folder under "Settings_NoSleepTime.xml".
+[list]
+[*] EnabledForAnimals. Whether animals will have their sleep needs deactivated. (default false)
+[*] EnabledForNonPlayableCharacters. Whether characters (humans) from other communities will have their sleep needs deactivated. (default false). 
+[/list]
+
+[h2]Compatibility[/h2]
+Shouldn't have any incompatibilities. Report any issues in the comments section!

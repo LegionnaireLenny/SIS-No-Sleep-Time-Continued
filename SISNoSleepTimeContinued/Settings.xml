@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<StorySettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<NativeName>SIS No Sleep Time Continued</NativeName>
+	<NativeDescription> This mod just disables sleep needs from the game. By the default behaviour, only your community has their sleep disabled, but you can change this in the settings.</NativeDescription>
+	<IsMod>true</IsMod>
+	<ProcedurallyGenerated>false</ProcedurallyGenerated>
+	<MapSize>Large</MapSize>
+	<StartDayOfYear>0</StartDayOfYear>
+	<StartHourOfDay>0</StartHourOfDay>
+	<ClothesPoints>6</ClothesPoints>
+	<SummerClothesPoints>4</SummerClothesPoints>
+	<WinterClothesPoints>8</WinterClothesPoints>
+	<EquipmentPoints>3</EquipmentPoints>
+	<SkillPoints>6</SkillPoints>
+	<StartingEquipmentOptions/>
+	<Loadouts/>
+	<DifficultySettings/>
+	<Dependencies/>
+	<HitTheRoadStory>
+		<WorkshopId>0</WorkshopId>
+	</HitTheRoadStory>
+	<HitTheRoadKeepVariables/>
+	<HitTheRoadMinFuelPercent>75</HitTheRoadMinFuelPercent>
+	<HitTheRoadMaxDamagePercent>50</HitTheRoadMaxDamagePercent>
+</StorySettings>
