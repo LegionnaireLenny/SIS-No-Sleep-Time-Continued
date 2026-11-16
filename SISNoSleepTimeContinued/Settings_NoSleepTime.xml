@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <SISNoSleepTime_Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LoggingEnabled>false</LoggingEnabled>
   <EnabledForAnimals>false</EnabledForAnimals>
   <EnabledForNonPlayableCharacters>false</EnabledForNonPlayableCharacters>
 </SISNoSleepTime_Settings>

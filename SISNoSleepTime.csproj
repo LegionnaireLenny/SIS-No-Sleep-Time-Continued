@@ -87,10 +87,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="SISNoSleepTimeContinued\CoverIcon.jpg" />
+    <Content Include="SISNoSleepTimeContinued\Settings.xml" />
+    <Content Include="SISNoSleepTimeContinued\Settings_NoSleepTime.xml" />
+    <Content Include="SISNoSleepTimeContinued\SISNOSLEEPTIME.txt" />
+    <Content Include="SISNoSleepTimeContinued\SteamDescription.txt" />
+    <Content Include="SISNoSleepTimeContinued\Version.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Directory.Build.props" />
     <None Include="README.md" />
+    <None Include="SISNoSleepTimeContinued\English.tsv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SISNoSleepTimeContinued\DLLs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
