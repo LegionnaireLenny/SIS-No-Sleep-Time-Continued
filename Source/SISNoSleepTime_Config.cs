@@ -27,6 +27,11 @@ public class SISNoSleepTime_Config
 		LogPath = StoryPath + LogFilename;
 		SettingsPath = StoryPath + SettingsFilename;
 		ModIdentifierPath = StoryPath + ModIdentifierFilename;
+
+		if (File.Exists(LogPath))
+		{
+			File.Delete(LogPath);
+		}
 	}
 
 	private static string GetStoryPath()
@@ -92,9 +97,14 @@ public class SISNoSleepTime_Config
         Log(JsonConvert.SerializeObject(obj));
 
         LoggingEnabled = obj.LoggingEnabled;
-		EnabledForAnimals = obj.EnabledForAnimals;
+		EnabledForPlayer = obj.EnabledForPlayer;
+		EnabledForPlayerCommunity = obj.EnabledForPlayerCommunity;
 		EnabledForNonPlayableCharacters = obj.EnabledForNonPlayableCharacters;
-	}
+		EnabledForAnimals = obj.EnabledForAnimals;
+		MinDaysSleepDeprivationToSleep = obj.MinDaysSleepDeprivationToSleep;
+        SleepRecoverRateMultiplier = obj.SleepRecoverRateMultiplier;
+		SleepDeprivationRateMultiplier = obj.SleepDeprivationRateMultiplier;
+    }
 
 	private static string StoryPath = "";
 	private static string LogPath = "";
@@ -105,7 +115,15 @@ public class SISNoSleepTime_Config
 	private static string SettingsFilename = "/Settings_NoSleepTime.xml";
 	private static string ModIdentifierFilename = "/SISNOSLEEPTIME.txt";
 
+    private static float _sleepRecoverRateMultiplier;
+    private static float _sleepDeprivationRateMultiplier;
+
 	public static bool LoggingEnabled;
-	public static bool EnabledForAnimals;
+    public static bool EnabledForPlayer;
+    public static bool EnabledForPlayerCommunity;
 	public static bool EnabledForNonPlayableCharacters;
+    public static bool EnabledForAnimals;
+	public static float MinDaysSleepDeprivationToSleep;
+    public static float SleepRecoverRateMultiplier { get => _sleepRecoverRateMultiplier; set => _sleepRecoverRateMultiplier = UnityEngine.Mathf.Max(0f, value); }
+	public static float SleepDeprivationRateMultiplier { get => _sleepDeprivationRateMultiplier; set => _sleepDeprivationRateMultiplier = UnityEngine.Mathf.Max(0f, value); }
 }

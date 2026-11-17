@@ -10,11 +10,28 @@ public class Character_CanSleep__Patch
             return;
         }
 
-        if ((SISNoSleepTime_Config.EnabledForAnimals && __instance is Animal) ||
-            (SISNoSleepTime_Config.EnabledForNonPlayableCharacters && __instance is Human && !__instance.IsOnPlayersTeam()) ||
-            (__instance is Human && __instance.IsOnPlayersTeam()))
+        if (__instance.IsOnPlayersTeam())
         {
-            __result = false;
+            SISNoSleepTime_Config.Log($"Goal: {__instance?.GetGoal()?.ToString() ?? "None"} | Goal Target: {__instance?.GoalTarget?.Object?.Category?.ToString() ?? "None"}");
+        }
+
+        if (SISNoSleepTime_Config.MinDaysSleepDeprivationToSleep > 0)
+        {
+            if (__instance.InsideBuilding != null && !__instance.IsOutdoors() && __instance.IsSleepingOrUnconscious())
+            {
+                __result = __instance.SleepDeprivation > 0f;
+            }
+            else
+            {
+                __result = __result && __instance.SleepDeprivation >= Sun.DayLengthSecs * SISNoSleepTime_Config.MinDaysSleepDeprivationToSleep;
+            }
+        }
+        else
+        {
+            if (SISNoSleepTime_Utils.IsCharacterExempt(__instance))
+            {
+                __result = false;
+            }
         }
     }
 }

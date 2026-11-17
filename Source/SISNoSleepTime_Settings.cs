@@ -14,6 +14,11 @@ public class SISNoSleepTime_Settings
 	}
 
 	public bool LoggingEnabled = false;
-	public bool EnabledForAnimals = false;
+	public bool EnabledForPlayer = true;
+	public bool EnabledForPlayerCommunity = true;
 	public bool EnabledForNonPlayableCharacters = false;
+	public bool EnabledForAnimals = false;
+	public float MinDaysSleepDeprivationToSleep = 0f;
+	public float SleepRecoverRateMultiplier = 1f;
+	public float SleepDeprivationRateMultiplier = 1f;
 }

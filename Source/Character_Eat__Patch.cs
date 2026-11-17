@@ -5,16 +5,13 @@ public class Character_Eat__Patch
 {
 	private static void Postfix(Character __instance)
 	{
-        if (__instance == null)
+        if (__instance == null ||
+            SISNoSleepTime_Config.MinDaysSleepDeprivationToSleep > 0 ||
+            !SISNoSleepTime_Utils.IsCharacterExempt(__instance))
         {
             return;
         }
 
-        if ((SISNoSleepTime_Config.EnabledForAnimals && __instance is Animal) ||
-            (SISNoSleepTime_Config.EnabledForNonPlayableCharacters && __instance is Human && !__instance.IsOnPlayersTeam()) ||
-            (__instance is Human && __instance.IsOnPlayersTeam()))
-        {
-            __instance.SleepDeprivation = 0f;
-        }
+        __instance.SleepDeprivation = 0f;
     }
 }

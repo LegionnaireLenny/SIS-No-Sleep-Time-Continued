@@ -4,17 +4,14 @@
 public class Character_GetSleepDeprivation__Patch
 {
 	private static void Postfix(ref float __result, Character __instance)
-	{
-        if (__instance == null)
+    {
+        if (__instance == null || 
+            SISNoSleepTime_Config.MinDaysSleepDeprivationToSleep > 0 ||
+            !SISNoSleepTime_Utils.IsCharacterExempt(__instance))
         {
             return;
         }
 
-        if ((SISNoSleepTime_Config.EnabledForAnimals && __instance is Animal) ||
-			(SISNoSleepTime_Config.EnabledForNonPlayableCharacters && __instance is Human && !__instance.IsOnPlayersTeam()) ||
-			(__instance is Human && __instance.IsOnPlayersTeam()))
-        {
-			__result = 0f;
-        }
+        __result = 0f;
     }
 }

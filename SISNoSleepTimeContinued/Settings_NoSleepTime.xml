@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <SISNoSleepTime_Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <LoggingEnabled>false</LoggingEnabled>
-  <EnabledForAnimals>false</EnabledForAnimals>
+  <EnabledForPlayer>true</EnabledForPlayer>
+  <EnabledForPlayerCommunity>true</EnabledForPlayerCommunity>
   <EnabledForNonPlayableCharacters>false</EnabledForNonPlayableCharacters>
+  <EnabledForAnimals>false</EnabledForAnimals>
+  <MinDaysSleepDeprivationToSleep>0.0</MinDaysSleepDeprivationToSleep>
+  <SleepRecoverRateMultiplier>1.0</SleepRecoverRateMultiplier>
+  <SleepDeprivationRateMultiplier>1.0</SleepDeprivationRateMultiplier>
 </SISNoSleepTime_Settings>

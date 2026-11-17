@@ -84,6 +84,7 @@
     <Compile Include="Source\Session_Load__Patch.cs" />
     <Compile Include="Source\SISNoSleepTime_Config.cs" />
     <Compile Include="Source\SISNoSleepTime_Settings.cs" />
+    <Compile Include="Source\SISNoSleepTime_Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />

@@ -1,5 +1,5 @@
-﻿using System;
-using HarmonyLib;
+﻿using HarmonyLib;
+using System;
 
 [HarmonyPatch(typeof(Character), "ConsumeLiquid", new Type[]
 {
@@ -20,16 +20,13 @@ public class Character_ConsumeLiquid__Patch
 {
 	private static void Postfix(Character __instance, LiquidPrototype liquid, float amount, bool playSound, bool fromInfoScreen, InfectionType infectedWith)
     {
-        if (__instance == null)
+        if (__instance == null ||
+            SISNoSleepTime_Config.MinDaysSleepDeprivationToSleep > 0 ||
+            !SISNoSleepTime_Utils.IsCharacterExempt(__instance))
         {
             return;
         }
 
-        if ((SISNoSleepTime_Config.EnabledForAnimals && __instance is Animal) ||
-            (SISNoSleepTime_Config.EnabledForNonPlayableCharacters && __instance is Human && !__instance.IsOnPlayersTeam()) ||
-            (__instance is Human && __instance.IsOnPlayersTeam()))
-        {
-            __instance.SleepDeprivation = 0f;
-        }
+        __instance.SleepDeprivation = 0f;
 	}
 }
