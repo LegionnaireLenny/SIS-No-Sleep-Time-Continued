@@ -13,7 +13,7 @@ Source code: https://github.com/LegionnaireLenny/SIS-No-Sleep-Time-Continued
 [hr][/hr]
 
 [h2]What is this?[/h2]
-This mod disables or customizes sleep needs in the game or. By the default behaviour, only your community has their sleep disabled, but you can change this in the settings.
+This mod allows you to disable or customize sleep needs in the game. By the default behaviour, only your community has their sleep disabled, but you can change this in the settings.
 
 If you would rather customize sleep needs instead of disabling them entirely, set [b]MinDaysSleepDeprivationToSleep[/b] to a value above 0, and configure [b]SleepRecoverRateMultiplier[/b] and [b]SleepDeprivationRateMultiplier[/b] to your liking.
 
